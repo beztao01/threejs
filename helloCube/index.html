@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Cube</title>
+</head>
+<body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r119/three.js"></script>
+
+    <script>
+        // Creeamos escena
+        var scene = new THREE.Scene();
+        scene.background = new THREE.Color(0X2a3b4c);
+        
+        //Agregamos camara
+        var camera = new THREE.PerpectiveCamera(
+            75,
+            window.innerWidth/window.innerHeight
+        );
+
+        //renderizado
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        renderer.render(scene, camera);
+    </script>
+    
+</body>
+</html>
